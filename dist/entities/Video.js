@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Video = void 0;
 const typeorm_1 = require("typeorm");
 const uuid_1 = require("uuid");
-const Category_entity_1 = require("./Category.entity");
+const Category_1 = require("./Category");
 let Video = class Video {
     constructor() {
         if (!this.id)
@@ -41,9 +41,9 @@ __decorate([
     __metadata("design:type", String)
 ], Video.prototype, "category_id", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => Category_entity_1.Category),
+    (0, typeorm_1.ManyToOne)(() => Category_1.Category),
     (0, typeorm_1.JoinColumn)({ name: "category_id" }),
-    __metadata("design:type", Category_entity_1.Category)
+    __metadata("design:type", Category_1.Category)
 ], Video.prototype, "category", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),

@@ -1,4 +1,4 @@
-import { Category } from "../entities/Category.entity";
+import { Category } from "../entities/Category";
 import { categoryRepository } from "../repositories/category.repository";
 
 interface CategoryRequest {
