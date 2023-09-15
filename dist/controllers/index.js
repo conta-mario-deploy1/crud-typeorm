@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAllVideosController = exports.CreateVideoController = exports.GetCategoryController = exports.UpdateCategoryController = exports.DeleteCategoryController = exports.GetAllCategoriesController = exports.CreateCategoryController = void 0;
+const CreateCategoryController_1 = __importDefault(require("./CreateCategoryController"));
+exports.CreateCategoryController = CreateCategoryController_1.default;
+const GetAllCategoriesController_1 = __importDefault(require("./GetAllCategoriesController"));
+exports.GetAllCategoriesController = GetAllCategoriesController_1.default;
+const DeleteCategoryController_1 = __importDefault(require("./DeleteCategoryController"));
+exports.DeleteCategoryController = DeleteCategoryController_1.default;
+const UpdateCategoryController_1 = __importDefault(require("./UpdateCategoryController"));
+exports.UpdateCategoryController = UpdateCategoryController_1.default;
+const GetCategoryController_1 = __importDefault(require("./GetCategoryController"));
+exports.GetCategoryController = GetCategoryController_1.default;
+const CreateVideoController_1 = __importDefault(require("./CreateVideoController"));
+exports.CreateVideoController = CreateVideoController_1.default;
+const GetAllVideosController_1 = __importDefault(require("./GetAllVideosController"));
+exports.GetAllVideosController = GetAllVideosController_1.default;
