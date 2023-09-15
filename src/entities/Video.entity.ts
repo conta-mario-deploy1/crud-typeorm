@@ -1,6 +1,6 @@
 import { Entity, Column, CreateDateColumn, UpdateDateColumn, PrimaryColumn, ManyToOne, JoinColumn } from "typeorm";
 import { v4 as makeId } from "uuid";
-import { Category } from "./Category";
+import { Category } from "./Category.entity";
 
 @Entity("videos")
 export class Video {

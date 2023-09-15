@@ -9,51 +9,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Video = void 0;
+exports.Category = void 0;
 const typeorm_1 = require("typeorm");
 const uuid_1 = require("uuid");
-const Category_entity_1 = require("./Category.entity");
-let Video = class Video {
+let Category = class Category {
     constructor() {
         if (!this.id)
             this.id = (0, uuid_1.v4)();
     }
 };
-exports.Video = Video;
+exports.Category = Category;
 __decorate([
     (0, typeorm_1.PrimaryColumn)(),
     __metadata("design:type", String)
-], Video.prototype, "id", void 0);
+], Category.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Video.prototype, "name", void 0);
+], Category.prototype, "name", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Video.prototype, "description", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
-], Video.prototype, "duration", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], Video.prototype, "category_id", void 0);
-__decorate([
-    (0, typeorm_1.ManyToOne)(() => Category_entity_1.Category),
-    (0, typeorm_1.JoinColumn)({ name: "category_id" }),
-    __metadata("design:type", Category_entity_1.Category)
-], Video.prototype, "category", void 0);
+], Category.prototype, "description", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
-], Video.prototype, "created_at", void 0);
+], Category.prototype, "created_at", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
-], Video.prototype, "updated_at", void 0);
-exports.Video = Video = __decorate([
-    (0, typeorm_1.Entity)("videos"),
+], Category.prototype, "updated_at", void 0);
+exports.Category = Category = __decorate([
+    (0, typeorm_1.Entity)("categories"),
     __metadata("design:paramtypes", [])
-], Video);
+], Category);

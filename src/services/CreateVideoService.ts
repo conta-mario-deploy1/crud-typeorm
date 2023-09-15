@@ -1,5 +1,5 @@
-import { Category } from '../entities/Category';
-import { Video } from '../entities/Video';
+import { Category } from '../entities/Category.entity';
+import { Video } from '../entities/Video.entity';
 import { videoRepository } from '../repositories/videoRepository';
 import { categoryRepository } from '../repositories/category.repository';
 
