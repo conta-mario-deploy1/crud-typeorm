@@ -21,8 +21,8 @@ export const AppDataSource = new DataSource({
             }
         },
      logging: true,
-     entities: ["src/entities/**/*.ts"],
-     migrations: ["src/database/migrations/**/*.ts"],
+     entities: ["src/entities/**/*.{js,ts}"],
+     migrations: ["src/database/migrations/**/*.{js,ts}"],
      subscribers: []
  });
 

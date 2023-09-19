@@ -1,4 +1,5 @@
 "use strict";
+const path = require("path");
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -24,7 +25,13 @@ exports.AppDataSource = new typeorm_1.DataSource({
         }
     },
     logging: true,
-    entities: [ `${ __dirname }/entities/*.js` ],
-    migrations: ["src/database/migrations/**/*.ts"],
+    entities: [
+        path.join(__dirname, "dist/entities/**/*.{js,ts}")
+        // "src/entities/**/*.{js,ts}"
+    ],
+    migrations: [
+        path.join(__dirname, "migrations/**/*.{js,ts}")
+        // "src/database/migrations/**/*.{js,ts}"
+    ],
     subscribers: []
 });
