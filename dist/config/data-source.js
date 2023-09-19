@@ -1,5 +1,4 @@
 "use strict";
-const path = require("path");
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -25,15 +24,7 @@ exports.AppDataSource = new typeorm_1.DataSource({
         }
     },
     logging: true,
-    entities: [
-        "../entities/Category.js",
-        "../entities/Video.js"
-    ],
-    migrations: [
-        "../database/migrations/1694660431629-CreateCategories.js",
-        "../database/migrations/1694665327464-CreateVideos.js"
-    ],
+    entities: ["distc/entities/**/*.{js,ts}"],
+    migrations: ["dist/database/migrations/**/*.{js,ts}"],
     subscribers: []
 });
-//__dirname+"/dist/entities/**/*.{js,ts}"
-//"src/database/migrations/**/*.{js,ts}"
