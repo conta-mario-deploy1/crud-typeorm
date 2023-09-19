@@ -26,12 +26,14 @@ exports.AppDataSource = new typeorm_1.DataSource({
     },
     logging: true,
     entities: [
-        path.join(__dirname, "dist/entities/**/*.{js,ts}")
-        // "src/entities/**/*.{js,ts}"
+        "../entities/Category.js",
+        "../entities/Video.js"
     ],
     migrations: [
-        path.join(__dirname, "migrations/**/*.{js,ts}")
-        // "src/database/migrations/**/*.{js,ts}"
+        "../database/migrations/1694660431629-CreateCategories.js",
+        "../database/migrations/1694665327464-CreateVideos.js"
     ],
     subscribers: []
 });
+//__dirname+"/dist/entities/**/*.{js,ts}"
+//"src/database/migrations/**/*.{js,ts}"
