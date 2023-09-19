@@ -24,7 +24,7 @@ exports.AppDataSource = new typeorm_1.DataSource({
         }
     },
     logging: true,
-    entities: ["distc/entities/**/*.{js,ts}"],
+    entities: ["dist/entities/**/*.{js,ts}"],
     migrations: ["dist/database/migrations/**/*.{js,ts}"],
     subscribers: []
 });
